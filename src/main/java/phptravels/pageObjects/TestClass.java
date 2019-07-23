@@ -7,19 +7,14 @@ public class TestClass {
 		SearchPage sp = new SearchPage();
 		hp.setUrl();
 		
-		hp.clickFlights();
-		String trip = "Round Trip";
-        hp.inputLocation("London", "Flights");
-        hp.inputLocation("Changi", "Flights");
-        hp.inputTripCabin(trip, "Business");
-        hp.departDate();
-        hp.selectDate("13-August 2019");
-        if(trip.equals("Round Trip")) 
-        		hp.selectDate("15-August 2019");
-        hp.clickPassenger();
-        hp.inputPassenger("2", "0", "3");
-		hp.search("Flights");
-		
+		hp.clickMenuTab("Tours");
+		hp.inputLocation("Oman", "Tours");
+		hp.tourDate();
+		hp.selectDate("22-September 2019");
+		hp.inputGuest("3 Guests");
+		hp.selectTourType("Adventure");
+		hp.search("Tours");
+		sp.verifySearch("Tours");
 	}
 
 }

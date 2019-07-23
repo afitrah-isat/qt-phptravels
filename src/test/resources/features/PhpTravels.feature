@@ -10,17 +10,24 @@ Scenario: Create new customer
 	
 Scenario: Search Hotels as Guest User
 	Given User in Homepage 
-	When User click Hotels
+	When User click "Hotels"
 	And User input data search Hotels
 	And User click Search button for "Hotels"
 	Then Result page for "Hotels" is displayed
 	
 Scenario: Search Flights as Guest User
 	Given User in Homepage 
-	When User click Flights
+	When User click "Flights"
 	And User input data search Flights
 	And User click Search button for "Flights"
 	Then Result page for "Flights" is displayed
+	
+Scenario: Search Tours as Guest User
+	Given User in Homepage 
+	When User click "Tours"
+	And User input data search Tours
+	And User click Search button for "Tours"
+	Then Result page for "Tours" is displayed
 	
 @Finish	
 Scenario: Login

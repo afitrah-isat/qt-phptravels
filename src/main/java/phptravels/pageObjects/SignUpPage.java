@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignUpPage extends BasePage {
+public class SignUpPage extends ABasePage {
 	
 	@FindBy(xpath = "//input[@name='firstname']")
 	private WebElement firstnameTxt;
@@ -28,8 +28,7 @@ public class SignUpPage extends BasePage {
 	private WebElement signUpBtn;
 	
 	public SignUpPage() {
-		initObjects();
-		PageFactory.initElements(driver, this);
+		initObjects(this);
 	}
 	
 	public void fillSignUp(String firstname, String lastname, String mobileNo, String email, String password, String confirmPassword) {

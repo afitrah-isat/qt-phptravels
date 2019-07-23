@@ -1,10 +1,6 @@
 package phptravels.stepDefinitions;
 
-import cucumber.api.PendingException;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.And;
+import io.cucumber.java.en.*;
 import phptravels.dataset.GlobalDataset;
 import phptravels.pageObjects.*;
 
@@ -72,16 +68,11 @@ public class StepDefinition {
         ap.logout(firstname);
     }
     
-
-    @When("^User click Hotels$")
-    public void user_click_hotels() throws Throwable {
-    	hp.clickHotels();
+    @When("^User click \"([^\"]*)\"$")
+    public void user_click_something(String strArg1) throws Throwable {
+        hp.clickMenuTab(strArg1);
     }
 
-//    @Then("^Result page is displayed$")
-//    public void result_page_is_displayed() throws Throwable {
-//        sp.verifySearch();
-//    }
     
     @Then("^Result page for \"([^\"]*)\" is displayed$")
     public void result_page_for_something_is_displayed(String strArg1) throws Throwable {
@@ -96,21 +87,12 @@ public class StepDefinition {
 		hp.selectDate("11-January 2020");
 		hp.inputTraveller(2, 3);
     }
-
-//    @And("^User click Search button$")
-//    public void user_click_search_button() throws Throwable {
-//    	hp.search();
-//    }
     
     @And("^User click Search button for \"([^\"]*)\"$")
     public void user_click_search_button_for_something(String strArg1) throws Throwable {
         hp.search(strArg1);
     }
     
-    @When("^User click Flights$")
-    public void user_click_flights() throws Throwable {
-        hp.clickFlights();
-    }
 
     @And("^User input data search Flights$")
     public void user_input_data_search_flights() throws Throwable {
@@ -125,6 +107,16 @@ public class StepDefinition {
         hp.clickPassenger();
         hp.inputPassenger("2", "0", "3");
         
+    }
+    
+    @And("^User input data search Tours$")
+    public void user_input_data_search_tours() throws Throwable {
+       
+    	hp.inputLocation("Oman", "Tours");
+		hp.tourDate();
+		hp.selectDate("22-September 2019");
+		hp.inputGuest("3 Guests");
+		hp.selectTourType("Adventure");
     }
 
 

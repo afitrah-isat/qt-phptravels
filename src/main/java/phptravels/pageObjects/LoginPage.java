@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends BasePage {
+public class LoginPage extends ABasePage {
 
 	@FindBy(xpath = "//input[@name='username']")
 	private WebElement emailTxt;
@@ -16,8 +16,7 @@ public class LoginPage extends BasePage {
 	private WebElement loginBtn;
 	
 	public LoginPage() {
-		initObjects();
-		PageFactory.initElements(driver, this);
+		initObjects(this);
 	}
 	
 	public void inputLogin(String email, String password) {

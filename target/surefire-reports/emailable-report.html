@@ -9,10 +9,47 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Qualitest</th></tr>
-<tr><td><a href="#t0">PhpTravels</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">260,558</td><td></td><td></td></tr>
+<tr><td><a href="#t0">PhpTravels</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">3</td><td class="num">175,397</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Qualitest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PhpTravels &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">phptravels.runners.TestRunner</td><td><a href="#m0">feature</a></td><td rowspan="1">1563778016203</td><td rowspan="1">259585</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Qualitest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PhpTravels &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">phptravels.runners.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="3">1563852687600</td><td rowspan="3">56327</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr><th colspan="4">PhpTravels &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">phptravels.runners.TestRunner</td><td><a href="#m3">runScenario</a></td><td rowspan="2">1563852640356</td><td rowspan="2">32889</td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr></tbody>
 </table>
-<h2>PhpTravels</h2><h3 id="m0">phptravels.runners.TestRunner#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>PhpTravels Test</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>PhpTravels</h2><h3 id="m0">phptravels.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Search Flights as Guest User&quot;</td><td>&quot;PhpTravels Test&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: expected [Flights List] but found [www.phptravels.net]
+	at phptravels.pageObjects.SearchPage.verifySearch(SearchPage.java:20)
+	at phptravels.stepDefinitions.StepDefinition.result_page_for_something_is_displayed(StepDefinition.java:79)
+	at ✽.Result page for &quot;Flights&quot; is displayed(file:src/test/resources/features/PhpTravels.feature:23)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">phptravels.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Search Tours as Guest User&quot;</td><td>&quot;PhpTravels Test&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: expected [Search Results] but found []
+	at phptravels.pageObjects.SearchPage.verifySearch(SearchPage.java:24)
+	at phptravels.stepDefinitions.StepDefinition.result_page_for_something_is_displayed(StepDefinition.java:79)
+	at ✽.Result page for &quot;Tours&quot; is displayed(file:src/test/resources/features/PhpTravels.feature:30)
+... Removed 6 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">phptravels.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Login&quot;</td><td>&quot;PhpTravels Test&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;username&apos;]&quot;}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;INM-04039&apos;, ip: &apos;10.196.163.183&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\AULIAF~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49899}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a78d2c999d316f633b5fe03536b05274
+*** Element info: {Using=xpath, value=//input[@name=&apos;username&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy31.sendKeys(Unknown Source)
+	at phptravels.pageObjects.LoginPage.inputLogin(LoginPage.java:24)
+	at phptravels.stepDefinitions.StepDefinition.user_input_email_and_password(StepDefinition.java:58)
+	at ✽.User input email and password(file:src/test/resources/features/PhpTravels.feature:36)
+... Removed 4 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">phptravels.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Create new customer&quot;</td><td>&quot;PhpTravels Test&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">phptravels.runners.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Search Hotels as Guest User&quot;</td><td>&quot;PhpTravels Test&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

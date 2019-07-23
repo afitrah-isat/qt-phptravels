@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Qualitest">
-              <span class="suite-name border-passed">Qualitest</span>
+              <span class="suite-name border-failed">Qualitest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 3 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Qualitest" class="hide-methods failed suite-Qualitest"> (hide)</a> <!-- hide-methods failed suite-Qualitest -->
+                      <a href="#" panel-name="suite-Qualitest" class="show-methods failed suite-Qualitest"> (show)</a> <!-- show-methods failed suite-Qualitest -->
+                    </span>
+                    <div class="method-list-content failed suite-Qualitest">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Qualitest" title="phptravels.runners.TestRunner" hash-for-method="runScenario(&quot;Search Flights as Guest User&quot;, &quot;PhpTravels Test&quot;)">runScenario("Search Flights as Guest User", "PhpTravels Test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Qualitest" title="phptravels.runners.TestRunner" hash-for-method="runScenario(&quot;Search Tours as Guest User&quot;, &quot;PhpTravels Test&quot;)">runScenario("Search Tours as Guest User", "PhpTravels Test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Qualitest" title="phptravels.runners.TestRunner" hash-for-method="runScenario(&quot;Login&quot;, &quot;PhpTravels Test&quot;)">runScenario("Login", "PhpTravels Test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Qualitest -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +126,12 @@
                     <div class="method-list-content passed suite-Qualitest">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Qualitest" title="phptravels.runners.TestRunner" hash-for-method="feature(PhpTravels Test)">feature(PhpTravels Test)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Qualitest" title="phptravels.runners.TestRunner" hash-for-method="runScenario(&quot;Create new customer&quot;, &quot;PhpTravels Test&quot;)">runScenario("Create new customer", "PhpTravels Test")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Qualitest" title="phptravels.runners.TestRunner" hash-for-method="runScenario(&quot;Search Hotels as Guest User&quot;, &quot;PhpTravels Test&quot;)">runScenario("Search Hotels as Guest User", "PhpTravels Test")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Qualitest -->
@@ -117,6 +146,83 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Qualitest" class="panel Qualitest">
+          <div class="suite-Qualitest-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">phptravels.runners.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search Flights as Guest User&quot;, &quot;PhpTravels Test&quot;)">
+                  </a> <!-- runScenario("Search Flights as Guest User", "PhpTravels Test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search Flights as Guest User", "PhpTravels Test")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Flights List] but found [www.phptravels.net]
+	at phptravels.pageObjects.SearchPage.verifySearch(SearchPage.java:20)
+	at phptravels.stepDefinitions.StepDefinition.result_page_for_something_is_displayed(StepDefinition.java:79)
+	at ✽.Result page for &quot;Flights&quot; is displayed(file:src/test/resources/features/PhpTravels.feature:23)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search Tours as Guest User&quot;, &quot;PhpTravels Test&quot;)">
+                  </a> <!-- runScenario("Search Tours as Guest User", "PhpTravels Test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search Tours as Guest User", "PhpTravels Test")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Search Results] but found []
+	at phptravels.pageObjects.SearchPage.verifySearch(SearchPage.java:24)
+	at phptravels.stepDefinitions.StepDefinition.result_page_for_something_is_displayed(StepDefinition.java:79)
+	at ✽.Result page for &quot;Tours&quot; is displayed(file:src/test/resources/features/PhpTravels.feature:30)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login&quot;, &quot;PhpTravels Test&quot;)">
+                  </a> <!-- runScenario("Login", "PhpTravels Test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login", "PhpTravels Test")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;username&apos;]&quot;}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;INM-04039&apos;, ip: &apos;10.196.163.183&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\AULIAF~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49899}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a78d2c999d316f633b5fe03536b05274
+*** Element info: {Using=xpath, value=//input[@name=&apos;username&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy31.sendKeys(Unknown Source)
+	at phptravels.pageObjects.LoginPage.inputLogin(LoginPage.java:24)
+	at phptravels.stepDefinitions.StepDefinition.user_input_email_and_password(StepDefinition.java:58)
+	at ✽.User input email and password(file:src/test/resources/features/PhpTravels.feature:36)
+... Removed 4 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Qualitest-class-failed -->
           <div class="suite-Qualitest-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -125,12 +231,22 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(PhpTravels Test)">
-                  </a> <!-- feature(PhpTravels Test) -->
-                  <span class="method-name">feature</span>
-                  <span class="parameters">(PhpTravels Test)</span>
+                  <a name="runScenario(&quot;Create new customer&quot;, &quot;PhpTravels Test&quot;)">
+                  </a> <!-- runScenario("Create new customer", "PhpTravels Test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Create new customer", "PhpTravels Test")</span>
                   <em>
-(Runs Cucumber Feature)                  </em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search Hotels as Guest User&quot;, &quot;PhpTravels Test&quot;)">
+                  </a> <!-- runScenario("Search Hotels as Guest User", "PhpTravels Test") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search Hotels as Guest User", "PhpTravels Test")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -175,7 +291,7 @@
               <span class="test-group-name">cucumber</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">feature</span>
+                <span class="method-in-group-name">runScenario</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -195,16 +311,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'feature')
+data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'phptravels.runners.TestRunner')
-data.setCell(0, 3, 259585);
+data.setCell(0, 3, 64484);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'phptravels.runners.TestRunner')
+data.setCell(1, 3, 56327);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'phptravels.runners.TestRunner')
+data.setCell(2, 3, 32889);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'phptravels.runners.TestRunner')
+data.setCell(3, 3, 14352);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'phptravels.runners.TestRunner')
+data.setCell(4, 3, 6712);
 window.suiteTableData['Qualitest']= { tableData: data, tableDiv: 'times-div-Qualitest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Qualitest">
               </div> <!-- times-div-Qualitest -->
             </div> <!-- times-div -->
@@ -236,12 +368,34 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">feature(PhpTravels Test)</span>
-                <span class="method-start">951 ms</span>
+                <span class="method-name">runScenario("Create new customer", "PhpTravels Test")</span>
+                <span class="method-start">583 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Search Hotels as Guest User", "PhpTravels Test")</span>
+                <span class="method-start">33474 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Search Flights as Guest User", "PhpTravels Test")</span>
+                <span class="method-start">47827 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Search Tours as Guest User", "PhpTravels Test")</span>
+                <span class="method-start">104176 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Login", "PhpTravels Test")</span>
+                <span class="method-start">110889 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">260539 ms</span>
+                <span class="method-start">175375 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

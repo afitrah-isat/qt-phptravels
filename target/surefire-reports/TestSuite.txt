@@ -1,4 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 262.121 s - in TestSuite
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 177.186 s <<< FAILURE! - in TestSuite
+runScenario(phptravels.runners.TestRunner)  Time elapsed: 56.351 s  <<< FAILURE!
+java.lang.AssertionError: expected [Flights List] but found [www.phptravels.net]
+
+runScenario(phptravels.runners.TestRunner)  Time elapsed: 6.71 s  <<< FAILURE!
+java.lang.AssertionError: expected [Search Results] but found []
+
+runScenario(phptravels.runners.TestRunner)  Time elapsed: 64.496 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='username']"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'INM-04039', ip: '10.196.163.183', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\AULIAF~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49899}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a78d2c999d316f633b5fe03536b05274
+*** Element info: {Using=xpath, value=//input[@name='username']}
+

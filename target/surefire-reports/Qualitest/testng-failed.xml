@@ -5,9 +5,9 @@
     <classes>
       <class name="phptravels.runners.TestRunner">
         <methods>
-          <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="0"/>
+          <include name="runScenario" invocation-numbers="2 3 4"/>
           <include name="tearDownClass"/>
+          <include name="setUpClass"/>
         </methods>
       </class> <!-- phptravels.runners.TestRunner -->
     </classes>

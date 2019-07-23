@@ -1,31 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="3" ignored="0" total="5" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Qualitest" duration-ms="260558" started-at="2019-07-22T06:46:55Z" finished-at="2019-07-22T06:51:15Z">
+  <suite name="Qualitest" duration-ms="175397" started-at="2019-07-23T03:30:39Z" finished-at="2019-07-23T03:33:35Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@4590c9c3]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="PhpTravels" duration-ms="260558" started-at="2019-07-22T06:46:55Z" finished-at="2019-07-22T06:51:15Z">
+    <test name="PhpTravels" duration-ms="175397" started-at="2019-07-23T03:30:39Z" finished-at="2019-07-23T03:33:35Z">
       <class name="phptravels.runners.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:phptravels.runners.TestRunner@4590c9c3]" name="setUpClass" is-config="true" duration-ms="706" started-at="2019-07-22T06:46:55Z" finished-at="2019-07-22T06:46:55Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="setUpClass" is-config="true" duration-ms="214" started-at="2019-07-23T03:30:39Z" finished-at="2019-07-23T03:30:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@4590c9c3]" name="feature" duration-ms="259585" started-at="2019-07-22T06:46:56Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-07-22T06:51:15Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="32889" started-at="2019-07-23T03:30:40Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-23T03:31:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[PhpTravels Test]]>
+                <![CDATA["Create new customer"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PhpTravels Test"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:phptravels.runners.TestRunner@4590c9c3]" name="tearDownClass" is-config="true" duration-ms="3" started-at="2019-07-22T06:51:15Z" finished-at="2019-07-22T06:51:15Z">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="14352" started-at="2019-07-23T03:31:13Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-23T03:31:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search Hotels as Guest User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PhpTravels Test"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="56327" started-at="2019-07-23T03:31:27Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-23T03:32:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search Flights as Guest User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PhpTravels Test"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Flights List] but found [www.phptravels.net]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Flights List] but found [www.phptravels.net]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at phptravels.pageObjects.SearchPage.verifySearch(SearchPage.java:20)
+at phptravels.stepDefinitions.StepDefinition.result_page_for_something_is_displayed(StepDefinition.java:79)
+at ✽.Result page for "Flights" is displayed(file:src/test/resources/features/PhpTravels.feature:23)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="6712" started-at="2019-07-23T03:32:23Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-23T03:32:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search Tours as Guest User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PhpTravels Test"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Search Results] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Search Results] but found []
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at phptravels.pageObjects.SearchPage.verifySearch(SearchPage.java:24)
+at phptravels.stepDefinitions.StepDefinition.result_page_for_something_is_displayed(StepDefinition.java:79)
+at ✽.Result page for "Tours" is displayed(file:src/test/resources/features/PhpTravels.feature:30)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="64484" started-at="2019-07-23T03:32:30Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-23T03:33:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["PhpTravels Test"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='username']"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'INM-04039', ip: '10.196.163.183', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\AULIAF~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49899}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a78d2c999d316f633b5fe03536b05274
+*** Element info: {Using=xpath, value=//input[@name='username']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='username']"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'INM-04039', ip: '10.196.163.183', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\AULIAF~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49899}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a78d2c999d316f633b5fe03536b05274
+*** Element info: {Using=xpath, value=//input[@name='username']}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy31.sendKeys(Unknown Source)
+at phptravels.pageObjects.LoginPage.inputLogin(LoginPage.java:24)
+at phptravels.stepDefinitions.StepDefinition.user_input_email_and_password(StepDefinition.java:58)
+at ✽.User input email and password(file:src/test/resources/features/PhpTravels.feature:36)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2019-07-23T03:33:35Z" finished-at="2019-07-23T03:33:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

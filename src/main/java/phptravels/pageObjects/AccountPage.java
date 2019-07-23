@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class AccountPage extends BasePage {
+public class AccountPage extends ABasePage {
 	
 	@FindBy(xpath = "//h3[@class='RTL']")
 	private WebElement welcomeTxt;
@@ -15,8 +15,7 @@ public class AccountPage extends BasePage {
 	private WebElement logoutLink;
 	
 	public AccountPage() {
-		initObjects();
-		PageFactory.initElements(driver, this);
+		initObjects(this);	
 	}
 	
 	public void verifyAccount(String expected) {
