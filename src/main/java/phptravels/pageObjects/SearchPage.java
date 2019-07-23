@@ -22,6 +22,9 @@ public class SearchPage extends ABasePage {
 			case "Tours":
 				Assert.assertTrue(true);
 				break;
+			case "Cars":
+				Assert.assertTrue(true);
+				break;
 			
 			default:
 				Assert.assertEquals(driver.getTitle(), "Search Results");

@@ -118,6 +118,16 @@ public class StepDefinition {
 		hp.inputGuest("3 Guests");
 		hp.selectTourType("Adventure");
     }
+    
+    @And("^User input data search Cars$")
+    public void user_input_data_search_cars() throws Throwable {
+    	hp.inputCarLocation("Manchester", "Pickup");
+		hp.departCarDate();
+		hp.selectDate("13-August 2019");
+		hp.selectDate("15-August 2019");
+		hp.pickupTime("01:30");
+		hp.dropoffTime("22:00");
+    }
 
 
 }

@@ -30,6 +30,9 @@ public class HomePage extends ABasePage {
 
 	@FindBy(xpath = "//span[contains(text(),'Tours')]")
 	private WebElement toursBtn;
+	
+	@FindBy(xpath = "//span[contains(text(),'Cars')]")
+	private WebElement carsBtn;
 
 	@FindBy(xpath = "//span[contains(text(),'Search by Hotel or City Name')]")
 	private WebElement locationHotelBtn;
@@ -39,6 +42,12 @@ public class HomePage extends ABasePage {
 
 	@FindBy(xpath = "//span[contains(text(),'Search by Listing or City Name')]")
 	private WebElement locationTourBtn;
+	
+	@FindBy(xpath = "//span[contains(text(),'Pick up')]")
+	private WebElement locationPickupBtn;
+	
+	@FindBy(xpath = "//span[contains(text(),'Drop off')]")
+	private WebElement locationDropoffBtn;
 
 	@FindBy(xpath = "//div[@id='select2-drop']//input[@class='select2-input select2-focused']")
 	private WebElement locationTxt;
@@ -117,6 +126,23 @@ public class HomePage extends ABasePage {
 	
 	@FindBy(xpath = "//button[@class='btn-primary btn btn-lg btn-block pfb0 loader']")
 	private WebElement searchTourBtn;
+	
+	@FindBy(xpath = "//input[@id='departcar']")
+	private WebElement departCarTxt;
+	
+	@FindBy(xpath = "//select[@name='pickupTime']")
+	private WebElement pickupTimeTxt;
+	
+	@FindBy(xpath = "//input[@id='returncar']")
+	private WebElement returnCarTxt;
+	
+	@FindBy(xpath = "//select[@name='dropoffTime']")
+	private WebElement dropoffTimeTxt;
+	
+	@FindBy(xpath = "//div[@class='bgfade col-md-2 form-group go-right col-xs-12 search-button']//button[@class='btn-primary btn btn-lg btn-block pfb0 loader'][contains(text(),'Search')]")
+	private WebElement searchCarBtn;
+	
+	private static String carLocation = "";
 
 	public HomePage() {
 		initObjects(this);
@@ -222,6 +248,10 @@ public class HomePage extends ABasePage {
 		case "Tours":
 			searchTourBtn.click();
 			break;
+		case "Cars":
+			wait.until(ExpectedConditions.elementToBeClickable(searchCarBtn));
+			searchCarBtn.click();
+			break;
 			
 		default:
 			locationHotelBtn.click();
@@ -250,6 +280,27 @@ public class HomePage extends ABasePage {
 		WebElement locationChosen = driver.findElement(By.xpath("//span[contains(text(),'" + location + "')]"));
 		locationChosen.click();
 	}
+	
+	public void inputCarLocation(String location, String type) {
+		if(type.equals("Pickup")) {
+			locationPickupBtn.click();
+			carLocation = location;
+		} else {
+			int loop = 0;
+			List<WebElement> locationDropoffTxt = driver.findElements(By.xpath("//span[contains(text(),'"+ carLocation +"')]"));
+			while((locationDropoffTxt.size() < 2) && (loop < 1000)) {
+				locationDropoffTxt = driver.findElements(By.xpath("//span[contains(text(),'"+ carLocation +"')]"));
+				loop++;
+			}
+			if(locationDropoffTxt.size() == 2)
+				locationDropoffTxt.get(1).click();
+		}
+		
+		locationTxt.sendKeys(location);
+
+		WebElement locationChosen = driver.findElement(By.xpath("//span[contains(text(),'" + location + "')]"));
+		locationChosen.click();
+	}
 
 	public void clickMenuTab(String type) {
 
@@ -262,6 +313,9 @@ public class HomePage extends ABasePage {
 			break;
 		case "Tours":
 			toursBtn.click();
+			break;
+		case "Cars":
+			carsBtn.click();
 			break;
 
 		default:
@@ -324,5 +378,23 @@ public class HomePage extends ABasePage {
 		
 		Select tourTypeDdl = new Select(tourTypeTxt);
 		tourTypeDdl.selectByVisibleText(tourType);
+	}
+	
+	public void departCarDate() {
+		departCarTxt.click();
+	}
+	
+	public void pickupTime(String time) {
+		Select pickupTimeDdl = new Select(pickupTimeTxt);
+		pickupTimeDdl.selectByVisibleText(time);
+	}
+	
+	public void returnCarDate() {
+		returnCarTxt.click();
+	}
+	
+	public void dropoffTime(String time) {
+		Select dropoffTimeDdl = new Select(dropoffTimeTxt);
+		dropoffTimeDdl.selectByVisibleText(time);
 	}
 }

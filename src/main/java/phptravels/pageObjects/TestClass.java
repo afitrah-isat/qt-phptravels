@@ -7,14 +7,14 @@ public class TestClass {
 		SearchPage sp = new SearchPage();
 		hp.setUrl();
 		
-		hp.clickMenuTab("Tours");
-		hp.inputLocation("Oman", "Tours");
-		hp.tourDate();
-		hp.selectDate("22-September 2019");
-		hp.inputGuest("3 Guests");
-		hp.selectTourType("Adventure");
-		hp.search("Tours");
-		sp.verifySearch("Tours");
+		hp.clickMenuTab("Cars");
+		hp.inputCarLocation("Manchester", "Pickup");
+		hp.departCarDate();
+		hp.selectDate("13-August 2019");
+		hp.selectDate("15-August 2019");
+		hp.pickupTime("01:30");
+		hp.dropoffTime("22:00");
+		hp.search("Cars");
 	}
 
 }

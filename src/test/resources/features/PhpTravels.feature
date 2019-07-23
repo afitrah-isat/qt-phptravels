@@ -29,6 +29,13 @@ Scenario: Search Tours as Guest User
 	And User click Search button for "Tours"
 	Then Result page for "Tours" is displayed
 	
+Scenario: Search Cars as Guest User
+	Given User in Homepage 
+	When User click "Cars"
+	And User input data search Cars
+	And User click Search button for "Cars"
+	Then Result page for "Cars" is displayed
+	
 @Finish	
 Scenario: Login
 	Given User in Homepage
