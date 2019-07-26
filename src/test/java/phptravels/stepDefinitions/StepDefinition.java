@@ -13,6 +13,19 @@ public class StepDefinition {
     String email = GlobalDataset.testDataProperty.getValue("email");
     String password = GlobalDataset.testDataProperty.getValue("password");
     String confirmPassword = GlobalDataset.testDataProperty.getValue("confirm_password");
+    String hotelLocation = GlobalDataset.testDataProperty.getValue("hotel_location");
+    String departLocation = GlobalDataset.testDataProperty.getValue("depart_location");
+    String arrivalLocation = GlobalDataset.testDataProperty.getValue("arrival_location");
+    String tourLocation = GlobalDataset.testDataProperty.getValue("tour_location");
+    String pickupLocation= GlobalDataset.testDataProperty.getValue("pickup_location");
+    String dropoffLocation= GlobalDataset.testDataProperty.getValue("dropoff_location");
+    String checkinDate = GlobalDataset.testDataProperty.getValue("checkin_date");
+    String checkoutDate = GlobalDataset.testDataProperty.getValue("checkout_date");
+    String departDate = GlobalDataset.testDataProperty.getValue("depart_date");
+    String returnDate = GlobalDataset.testDataProperty.getValue("return_date");
+    String tourDate = GlobalDataset.testDataProperty.getValue("tour_date");
+    String pickupDate = GlobalDataset.testDataProperty.getValue("pickup_date");
+    String dropoffDate = GlobalDataset.testDataProperty.getValue("dropoff_date");
 	
 	HomePage hp = new HomePage();
 	SignUpPage sup = new SignUpPage();
@@ -81,10 +94,10 @@ public class StepDefinition {
 
     @And("^User input data search Hotels$")
     public void user_input_data_search_hotels() throws Throwable {
-    	hp.inputLocation("Jakarta", "Hotels");
+    	hp.inputLocation(hotelLocation, "Hotels");
 		hp.checkInDate();
-		hp.selectDate("31-December 2019");
-		hp.selectDate("11-January 2020");
+		hp.selectDate(checkinDate);
+		hp.selectDate(checkoutDate);
 		hp.inputTraveller(2, 3);
     }
     
@@ -97,13 +110,13 @@ public class StepDefinition {
     @And("^User input data search Flights$")
     public void user_input_data_search_flights() throws Throwable {
     	String trip = "Round Trip";
-        hp.inputLocation("London", "Flights");
-        hp.inputLocation("Changi", "Flights");
+        hp.inputLocation(departLocation, "Flights");
+        hp.inputLocation(arrivalLocation, "Flights");
         hp.inputTripCabin(trip, "Business");
         hp.departDate();
-        hp.selectDate("13-August 2019");
+        hp.selectDate(departDate);
         if(trip.equals("Round Trip")) 
-        		hp.selectDate("25-August 2019");
+        		hp.selectDate(returnDate);
         hp.clickPassenger();
         hp.inputPassenger("2", "0", "3");
         
@@ -112,19 +125,19 @@ public class StepDefinition {
     @And("^User input data search Tours$")
     public void user_input_data_search_tours() throws Throwable {
        
-    	hp.inputLocation("Oman", "Tours");
+    	hp.inputLocation(tourLocation, "Tours");
 		hp.tourDate();
-		hp.selectDate("22-September 2019");
+		hp.selectDate(tourDate);
 		hp.inputGuest("3 Guests");
 		hp.selectTourType("Adventure");
     }
     
     @And("^User input data search Cars$")
     public void user_input_data_search_cars() throws Throwable {
-    	hp.inputCarLocation("Manchester", "Pickup");
+    	hp.inputCarLocation(pickupLocation, "Pickup");
 		hp.departCarDate();
-		hp.selectDate("13-August 2019");
-		hp.selectDate("15-August 2019");
+		hp.selectDate(pickupDate);
+		hp.selectDate(dropoffDate);
 		hp.pickupTime("01:30");
 		hp.dropoffTime("22:00");
     }

@@ -1,7 +1,5 @@
 package phptravels.pageObjects;
 
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 public class SearchPage extends ABasePage {
@@ -15,15 +13,19 @@ public class SearchPage extends ABasePage {
 			switch(type) {
 			case "Hotels":
 				Assert.assertEquals(driver.getTitle(), "Search Results");
+				logger.info("PASS");
 				break;
 			case "Flights":
 				Assert.assertEquals(driver.getTitle(), "Flights List");
+				logger.info("PASS");
 				break;
 			case "Tours":
 				Assert.assertTrue(true);
+				logger.info("PASS");
 				break;
 			case "Cars":
 				Assert.assertTrue(true);
+				logger.info("PASS");
 				break;
 			
 			default:

@@ -1,6 +1,7 @@
 package phptravels.stepDefinitions;
 
-import cucumber.api.java.After;
+
+import io.cucumber.java.After;
 import phptravels.dataset.DriverFactory;
 
 public class Hooks {
