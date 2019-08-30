@@ -14,7 +14,15 @@ Scenario: Search Hotels as Guest User
 	And User input data search Hotels
 	And User click Search button for "Hotels"
 	Then Result page for "Hotels" is displayed
-	
+
+#Scenario: Book Hotels as Guest User
+#	Given Result page for "Hotels" is displayed 
+#	When User click Details for "Hotels"
+#	And User click Book Now for selected room
+#	And User input booking data
+#	And User click Complete Booking
+#	Then Result page for "Hotels" is displayed
+
 Scenario: Search Flights as Guest User
 	Given User in Homepage 
 	When User click "Flights"

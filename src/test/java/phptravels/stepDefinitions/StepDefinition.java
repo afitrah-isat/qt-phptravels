@@ -129,7 +129,7 @@ public class StepDefinition {
 		hp.tourDate();
 		hp.selectDate(tourDate);
 		hp.inputGuest("3 Guests");
-		hp.selectTourType("Adventure");
+		hp.selectTourType("Private");
     }
     
     @And("^User input data search Cars$")

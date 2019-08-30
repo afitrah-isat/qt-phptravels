@@ -36,7 +36,7 @@ public class HomePage extends ABasePage {
 	@FindBy(xpath = "//span[contains(text(),'Search by Hotel or City Name')]")
 	private WebElement locationHotelBtn;
 
-	@FindBy(xpath = "//span[contains(text(),'Enter City Or Airport')]")
+	@FindBy(xpath = "//span[contains(text(),'Enter Location')]")
 	private WebElement locationFlightBtn;
 
 	@FindBy(xpath = "//span[contains(text(),'Search by Listing or City Name')]")
@@ -57,25 +57,25 @@ public class HomePage extends ABasePage {
 	@FindBy(xpath = "//input[@name='checkout']")
 	private WebElement checkOutTxt;
 
-	@FindBy(xpath = "//input[@id='travellersInput']")
+	@FindBy(xpath = "//input[@id='htravellersInput']")
 	private WebElement travellerTxt;
 
-	@FindBy(xpath = "//button[@id='adultMinusBtn']")
+	@FindBy(xpath = "//button[@id='hadultMinusBtn']")
 	private WebElement adultMinusBtn;
 
-	@FindBy(xpath = "//input[@id='adultInput']")
+	@FindBy(xpath = "//input[@id='hadultInput']")
 	private WebElement adultTxt;
 
-	@FindBy(xpath = "//button[@id='adultPlusBtn']")
+	@FindBy(xpath = "//button[@id='hadultPlusBtn']")
 	private WebElement adultPlusBtn;
 
-	@FindBy(xpath = "//button[@id='childMinusBtn']")
+	@FindBy(xpath = "//button[@id='hchildMinusBtn']")
 	private WebElement childMinusBtn;
 
-	@FindBy(xpath = "//input[@id='childInput']")
+	@FindBy(xpath = "//input[@id='hchildInput']")
 	private WebElement childTxt;
 
-	@FindBy(xpath = "//button[@id='childPlusBtn']")
+	@FindBy(xpath = "//button[@id='hchildPlusBtn']")
 	private WebElement childPlusBtn;
 
 	@FindBy(xpath = "//button[@class='btn btn-lg btn-block btn-primary pfb0 loader']")
@@ -350,8 +350,8 @@ public class HomePage extends ABasePage {
 			roundTripBtn.click();
 		}
 
-		Select cabinDdl = new Select(cabinTxt);
-		cabinDdl.selectByVisibleText(cabin);
+		//Select cabinDdl = new Select(cabinTxt);
+		//cabinDdl.selectByVisibleText(cabin);
 
 	}
 

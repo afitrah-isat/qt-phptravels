@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Qualitest" duration-ms="359105" started-at="2019-07-26T02:53:31Z" finished-at="2019-07-26T02:59:30Z">
+  <suite name="Qualitest" duration-ms="213204" started-at="2019-08-14T07:22:18Z" finished-at="2019-08-14T07:25:51Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@3c09711b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="PhpTravels" duration-ms="359105" started-at="2019-07-26T02:53:31Z" finished-at="2019-07-26T02:59:30Z">
+    <test name="PhpTravels" duration-ms="213204" started-at="2019-08-14T07:22:18Z" finished-at="2019-08-14T07:25:51Z">
       <class name="phptravels.runners.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="setUpClass" is-config="true" duration-ms="255" started-at="2019-07-26T02:53:31Z" finished-at="2019-07-26T02:53:31Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:phptravels.runners.TestRunner@3c09711b]" name="setUpClass" is-config="true" duration-ms="664" started-at="2019-08-14T07:22:18Z" finished-at="2019-08-14T07:22:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="32672" started-at="2019-07-26T02:53:32Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-26T02:54:04Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@3c09711b]" name="runScenario" duration-ms="53180" started-at="2019-08-14T07:22:19Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-08-14T07:23:13Z">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="11100" started-at="2019-07-26T02:54:04Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-26T02:54:15Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@3c09711b]" name="runScenario" duration-ms="66704" started-at="2019-08-14T07:23:13Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-08-14T07:24:19Z">
           <params>
             <param index="0">
               <value>
@@ -46,7 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="259819" started-at="2019-07-26T02:54:15Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-26T02:58:35Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@3c09711b]" name="runScenario" duration-ms="34570" started-at="2019-08-14T07:24:19Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-08-14T07:24:54Z">
           <params>
             <param index="0">
               <value>
@@ -62,7 +62,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="25969" started-at="2019-07-26T02:58:35Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-26T02:59:01Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@3c09711b]" name="runScenario" duration-ms="25203" started-at="2019-08-14T07:24:54Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-08-14T07:25:19Z">
           <params>
             <param index="0">
               <value>
@@ -78,7 +78,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="15365" started-at="2019-07-26T02:59:01Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-26T02:59:17Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@3c09711b]" name="runScenario" duration-ms="20067" started-at="2019-08-14T07:25:19Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-08-14T07:25:39Z">
           <params>
             <param index="0">
               <value>
@@ -94,7 +94,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="runScenario" duration-ms="13550" started-at="2019-07-26T02:59:17Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-07-26T02:59:30Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:phptravels.runners.TestRunner@3c09711b]" name="runScenario" duration-ms="12177" started-at="2019-08-14T07:25:39Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-08-14T07:25:51Z">
           <params>
             <param index="0">
               <value>
@@ -110,7 +110,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:phptravels.runners.TestRunner@6276ae34]" name="tearDownClass" is-config="true" duration-ms="2" started-at="2019-07-26T02:59:30Z" finished-at="2019-07-26T02:59:30Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:phptravels.runners.TestRunner@3c09711b]" name="tearDownClass" is-config="true" duration-ms="5" started-at="2019-08-14T07:25:51Z" finished-at="2019-08-14T07:25:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
